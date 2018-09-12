@@ -24,6 +24,7 @@ let gfs;
 conn.once('open', () => {
   // Init stream
   gfs = Grid(conn.db, mongoose.mongo);
+  gfs.collection('uploads');
 });
 
 // Create storage engine
